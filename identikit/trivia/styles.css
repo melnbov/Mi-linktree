@@ -1,0 +1,87 @@
+
+body {
+    margin:0; 
+    text-align: center; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 0;
+    background-image: url(img-trivia/fondo4.jpg);
+    background-size:cover;
+}
+
+div{
+    background-color: rgba(249, 249, 249, 0.943);
+    width: 700px;
+    border-radius: 50px;
+    margin-top: 35px;
+}
+.niveles{
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 700px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+h1{
+    color:black; 
+    padding-top: 20px;
+    
+}
+h2{
+    color: rgb(135, 3, 206);
+}
+img{
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+
+}
+
+button{
+    border-radius: 15px;
+    border-color: orange;
+    background-color: orange; 
+    box-shadow:  2px 2px 5px 0px rgba(0,0,0,0.5);
+    width: 200px; 
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Overpass, sans-serif;
+}
+
+button:hover{
+      background-color: rgba(138, 7, 209, 0.564);
+      border-color: rgba(138, 7, 209, 0.564);
+      
+}
+
+button a {
+    text-decoration:none;
+    color:black; 
+    font-size: 20px
+}
+
+.boton{
+    width: 250px;
+    height: 60px;
+    box-shadow:  2px 2px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    background-color: orange;
+    border-radius: 15px;
+    border-color: orange
+
+}
+.boton a{
+    text-decoration:none;
+    color:black; 
+    font-size: 17px
+}
+
+
+.mal{
+    background-color: rgba(165, 42, 42, 0.888);
+
+}
+.textmal{
+    color: white;
+}
+
