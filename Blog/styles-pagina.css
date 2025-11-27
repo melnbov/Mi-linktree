@@ -1,0 +1,685 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d0edf7;
+  color: #333;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/*  NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(233, 77, 60, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 60px;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #82defd;
+}
+
+#logo {
+  font-size: 2.5rem;
+  color: white;
+}
+
+
+.titulo-principal {
+  text-align: center;
+  margin: 20px 0 30px;
+  color: #e94d3c;
+}
+
+/*Fin de nav*/
+
+main {
+  margin-top: 75px;
+}
+
+/* SECCIONES DE ARTÍCULOS - Sobre BLOG  */
+.articulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+  max-width: 1100px;
+  margin-bottom: 60px;
+}
+
+.card-pag {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+
+
+
+}
+
+.card-pag p {
+  text-align: left;
+}
+
+.img-principal,
+.img-secundaria {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* GALERÍA */
+.galeria {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.titulo-galeria {
+  text-align: center;
+  color: #e94d3c;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas fijas */
+  gap: 15px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Fin de secciones de articulos -  sobre blog */
+
+
+/* ARticulo de comidas - recetas */
+.ingredientes {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fffbfb;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ingredientes h2 {
+  color: #e94d3c;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.lista-ingredientes {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.lista-ingredientes li {
+  color: #bd0e0e;
+  
+}
+
+/* Paso a paso de recetas */
+.pasos {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fffbfb;
+  padding: 25px;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pasos h2 {
+  color: #e07a5f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pasos ol {
+  counter-reset: paso;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pasos li {
+  counter-increment: paso;
+  margin: 15px 0;
+  padding-left: 40px;
+  position: relative;
+}
+
+.pasos li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background: #e07a5f;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* categorias paginas  */
+
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  color: #2589aa;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: #e94d3cc6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #c63c2e;
+}
+
+/*botones de cada pagina de volver*/
+.botones-centro {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* separación entre los botones */
+  margin-top: 30px;        /* separación con lo que haya arriba */
+}
+
+.btn-pag {
+  background-color: #e94d3c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-pag:hover {
+  background-color: #c34134;
+}
+
+
+
+/*Formularios*/
+
+.container-form {
+  max-width: 650px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.titulo-form {
+  font-size: 2.4rem;
+  color: #e94d3c;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.descripcion-form {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+}
+
+label {
+  font-weight: bold;
+  color: #e94d3c;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #cde9f7;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: #fafeff;
+  transition: .3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #e94d3c;
+  box-shadow: 0 0 8px rgba(233, 77, 60, 0.25);
+}
+
+.btn {
+  background: #e94d3c;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #c63c2e;
+}
+
+
+
+/* Publicaciones */
+
+.titulo {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+
+}
+
+.categoria {
+  padding: 30px;
+
+}
+
+.cat-titulo {
+  font-size: 30px;
+  font-weight: 600px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #e94d3c;
+  text-shadow: 1px 1px 3px rgba(80, 80, 80, 0.25);
+
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card-publi {
+  background: white;
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.card-publi:hover {
+  transform: translateY(-5px);
+}
+
+.card-publi img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card-publi p {
+  margin-top: 10px
+}
+
+.card-publi h3 {
+  font-size: 23px;
+  color: #2589aa;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #e94d3cc6;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.9;
+
+
+}
+
+/* --- FOOTER --- */
+
+.footer {
+  background-color: #e94d3c;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.footer-col {
+  min-width: 200px;
+
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin: 6px 0;
+}
+
+.footer-col a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- RESPONSIVE --- */
+/*Menu*/
+#toggle-menu {
+  display: none;
+}
+
+.toggle-label {
+  display: none;
+  color: white;
+  padding: 8px 12px;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+@media (max-width: 900px) {
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(233, 77, 60, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 180px;
+    gap: 15px;
+  }
+
+  .toggle-label {
+    display: block;
+  }
+
+  #toggle-menu:checked~ul.menu {
+    display: flex;
+  }
+
+  #logo {
+    margin-left: 10px;
+  }
+
+  /*Pagina Sobre blog*/
+  .articulos {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  @media (max-width: 600px) {
+    .galeria-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 400px) {
+    .galeria-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  /*pagina de publicaciones*/
+  .categoria {
+    padding: 20px 10px;
+  }
+
+  .cat-titulo {
+    font-size: 24px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-publi {
+    max-width: 90%;
+  }
+
+  /*Pagina de contacto*/
+
+  .container-form {
+    padding: 25px;
+  }
+
+  .titulo-form {
+    font-size: 2rem;
+  }
+
+  .descripcion-form {
+    font-size: 1rem;
+  }
+
+  /*Paginas de categorias lugares,comida,cultura*/
+  .card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .articulos {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card img {
+    max-width: 250px;
+  }
+
+  /*Pagina de recetas*/
+
+  .articulos-recet {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .img-principal,
+  .img-secundaria {
+    max-width: 100%;
+  }
+
+  .ingredientes {
+    max-width: 100%;
+    margin: 30px auto;
+  }
+
+  .pasos {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .pasos li {
+    padding-left: 35px;
+  }
+
+  .pasos li::before {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
+/*botones*/
+@media (max-width: 500px) {
+  .botones-centro {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .btn-pag {
+    width: 80%;             
+    text-align: center;
+  }
+}
+
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 10px;
+    text-align: center;
+  }
+}
