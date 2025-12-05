@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Conectando Generaciones es una iniciativa que promueve la inclusión y el bienestar de los adultos mayores mediante actividades intergeneracionales. A través de voluntariado, talleres y eventos solidarios, buscamos reducir la soledad, fortalecer vínculos y construir comunidades más unidas. Además, contamos con un programa de sponsors que apoya nuestras acciones y reconoce el compromiso de los voluntarios.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Giovanna Manograsso y Melina Bovarines">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros </title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="imagenes-index/favicon-convertido-a-256x256.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-progr.css">
+</head>
+
+<body>
+    <div id="theme-container" class="light">
+        <nav>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li class="logo-centro">
+                        <a class="logo" href="index.html">
+                            <img src="imagenes-index/logo1.png" width="50px">
+                            Conectando generaciones
+                        </a>
+                    </li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">
+                        <img id="toggle-icon" src="imagenes/sol.png" alt="icono">
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <header class="header-program">
+            <picture class="bg-img">
+                <source srcset="imagenes/voluntarios-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                <source srcset="imagenes/voluntarios-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                <source srcset="imagenes/voluntarios-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                <img src="imagenes/voluntarios-pag-1600.jpg" alt="Voluntarios">
+            </picture>
+            <div class="header-content">
+                <h1>Voluntariado Vivo </h1>
+            </div>
+        </header>
+        <section class="inf-voluntario">
+            <h2>Que hacemos en Voluntariado Vivo</h2>
+            <p>Nuestro Programa de Voluntariado Vivo invita a todas las personas interesadas en brindar su tiempo,
+                energía y habilidades a una causa social significativa. Ya sea por vocación, para adquirir experiencia, para
+                fortalecer el CV o simplemente por el deseo de ayudar, este programa ofrece un espacio inclusivo y
+                enriquecedor donde cada voluntario puede marcar una diferencia real.
+            </p><br>
+            <p>
+               <strong>Participar implica acompañar a adultos mayores mediante actividades recreativas, juegos,
+                charlas, talleres y encuentros diseñados para promover su bienestar emocional, social y cognitivo.</strong> A través de
+                estos momentos compartidos, fomentamos vínculos afectivos, fortalecemos la comunidad y creamos experiencias que
+                transforman tanto a quienes reciben el acompañamiento como a quienes lo brindan.
+            </p><br>
+            <p>
+                <strong>Sumarte como voluntario no solo genera impacto en la vida de los demás: también te permite crecer
+                personalmente, desarrollar nuevas habilidades y formar parte de una red comprometida con el cuidado, la
+                empatía y la solidaridad.</strong>
+            </p>
+        </section>
+        <section>
+            <h2>Nuestras actividades</h2>
+            <div class="my-carousel-container">
+                <button class="my-arrow my-left" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="my-carousel">
+                    <div class="my-carousel-track">
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/bingo-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/bingo-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/bingo-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/bingo-pag-1600.jpg" alt="Imagen 1">
+                                </picture>
+                                
+                                <p class="desc">
+                                    Nuestros voluntarios comparten una tarde llena de risas y compañía jugando al
+                                    bingo con personas mayores en hogares de residencia.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/anciarbol-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/anciarbol-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/anciarbol-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/anciarbol-pag-1600.jpg" alt="">
+                                </picture>
+                                <p class="desc">Nuestros voluntarios acompañan a los adultos mayores en
+                                    actividades
+                                    que promueven el bienestar y el cuidado del entorno.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/abuezoo-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/abuezoo-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/abuezoo-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/abuezoo-pag-1600.jpg" alt="Imagen 3">
+                                </picture>
+                                
+                                <p class="desc">Nuestros voluntarios acompañan a los adultos mayores en paseos
+                                    recreativos que fortalecen su bienestar emocional y social.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/activiabue-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/activiabue-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/activiabue-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/activiabue-pag-1600.jpg" alt="Imagen 4">
+                                </picture>
+                                
+                                <p class="desc">Nuestros voluntarios visitanlos hogares de adultos mayores para
+                                    compartir momentos de actividad, recreación y compañía.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-arrow my-right" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        <div class="btn-container">
+            <button type="button" class="btn aplicar-voluntario" data-bs-toggle="modal" data-bs-target="#voluntarioModal">
+                Aplicar
+            </button>
+            <button class="btn-volver"><a href="programasong.html">Volver atras</a></button>
+        </div>
+        <!-- MODAL VOLUNTARIADO -->
+        <div class="modal fade" id="voluntarioModal" tabindex="-1" aria-labelledby="voluntarioModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="voluntarioModalLabel">Voluntariado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formVoluntariado">
+                            <label class="form-label">Nombre completo:</label>
+                            <input type="text" class="form-control" id="volNombre" required>
+                            <label class="form-label mt-3">Email:</label>
+                            <input type="email" class="form-control" id="volEmail" required>
+                            <label class="form-label mt-3">Teléfono:</label>
+                            <input type="tel" class="form-control" id="volTelefono" >
+                            <label class="form-label mt-3">Disponibilidad:</label>
+                            <select class="form-select" id="volDisponibilidad" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Fines de semana">Fines de semana</option>
+                                <option value="Días de semana por la tarde">Días de semana por la tarde</option>
+                                <option value="Días de semana por la mañana">Días de semana por la mañana</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                            <label class="form-label mt-3">¿Por qué querés ser voluntario/a?</label>
+                            <textarea class="form-control" id="volMotivo" rows="3" required></textarea>
+                            <img src="imagenes-index/voluntario.jpg" alt="">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="btnEnviarVoluntario" type="button" class="btn btn-success">Enviar</button>
+                    </div>
+                    <!-- FORMULARIO OCULTO para enviar por FormSubmit -->
+                    <form id="formVoluntarioMail" action="https://formsubmit.co/giovannamanograsso@gmail.com" method="POST" style="display:none;">
+                        <input type="hidden" name="nombre" id="mailVolNombre">
+                        <input type="hidden" name="email" id="mailVolEmail">
+                        <input type="hidden" name="telefono" id="mailVolTelefono">
+                        <input type="hidden" name="disponibilidad" id="mailVolDisponibilidad">
+                        <input type="hidden" name="motivo" id="mailVolMotivo">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL CONFIRMACIÓN -->
+        <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="confirmacionModalLabel">¡Formulario enviado!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        Gracias por tu aporte. <br>Serás redirigido a la página principal.
+                    </div>
+                    <div class="modal-footer">
+                        <a href="programasong.html" id="volverIndex" class="btn btn-primary">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="columna">
+                <h3 class="nombre">© 2025 - Giovanna Manograsso y <br>Melina Bovarines</h3>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Mapa del sitio</h3>
+                <ul>
+                    <li><a class="boton" href="index.html">Inicio</a></li>
+                    <li><a class="boton" href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a class="boton" href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a class="boton" href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Redes sociales</h3>
+                <ul>
+                    <li><a class="boton" href="https://www.tiktok.com/">TikTok</a></li>
+                    <li><a class="boton" href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a class="boton" href="../linktree/index.html">Linktree</a></li>
+                </ul>
+            </div>
+            <div class="volver-arriba-footer">
+                <a href="voluntariado.html" class="volver-arriba">Volver arriba</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Seleccionamos el botón hamburguesa y el menú
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            // Alternamos la clase 'show' para mostrar/ocultar el menú
+            navLinks.classList.toggle('show');
+
+            // Alternamos la animación de la hamburguesa
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    <script src="paginas.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

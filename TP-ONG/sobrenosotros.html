@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"content="Conectando Generaciones es una iniciativa que promueve la inclusión y el bienestar de los adultos mayores mediante actividades intergeneracionales. A través de voluntariado, talleres y eventos solidarios, buscamos reducir la soledad, fortalecer vínculos y construir comunidades más unidas. Además, contamos con un programa de sponsors que apoya nuestras acciones y reconoce el compromiso de los voluntarios.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Giovanna Manograsso y Melina Bovarines">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros </title>
+    <link rel="icon" href="imagenes-index/favicon-convertido-a-256x256.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylespag.css">
+</head>
+<body>
+    <div id="theme-container" class="light">
+        <nav>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li class="logo-centro">
+                        <a class="logo" href="index.html">
+                            <img src="imagenes-index/logo1.png" width="50px">
+                            Conectando generaciones
+                        </a>
+                    </li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">
+                        <img id="toggle-icon" src="imagenes-index/sol.png" alt="icono">
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <header class="header-sobrenosotros">
+            <picture class="bg-img">
+                <source srcset="imagenes/sobrenos-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                <source srcset="imagenes/sobrenos-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                <source srcset="imagenes/sobrenos-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                <img src="imagenes/sobrenos-pag-1600.jpg" alt="Voluntarios">
+            </picture>
+            <div class="header-content">
+                <h1 class="titulo">Sobre nosotros</h1>
+            </div>
+        </header>
+        <section class="section text-content">
+            <h2>Nuestra Historia</h2>
+            <p><strong>Conectando Generaciones</strong> nació a partir de un momento simple, pero profundamente
+                transformador. Durante una
+                jornada comunitaria, un grupo de jóvenes compartió una tarde con adultos mayores de un hogar local. Entre
+                charlas, mates y juegos de mesa, surgieron historias que habían quedado guardadas durante años: relatos de
+                infancia, aprendizajes de vida, anécdotas de trabajo, amores, pérdidas y sueños que aún seguían vivos. Lo
+                que para muchos jóvenes era una actividad más, se convirtió en una experiencia reveladora al ver la emoción
+                y gratitud de los adultos mayores al sentirse escuchados, acompañados y valorados.
+            </p><br>
+            <p>Al finalizar aquella jornada, el grupo notó algo que los marcó: muchos de esos adultos mayores no recibían
+                visitas frecuentes, no tenían espacios para compartir con otras generaciones y, en varios casos, enfrentaban
+                la soledad como parte cotidiana de sus vidas. Esa realidad despertó una pregunta que cambiaría todo:
+                <strong> ¿Qué pasaría si más personas pudieran conocer estas historias? ¿Cuántas vidas podrían cambiar si conectáramos a
+                las generaciones de forma intencional y humana?</strong>
+            </p><br>
+            <p>
+                Con esa idea en mente comenzaron pequeñas iniciativas: tardes de juegos, talleres creativos, caminatas
+                acompañadas, jornadas de voluntariado y actividades recreativas que buscaban unir a jóvenes, niños y adultos
+                mayores. Lo que al principio era un proyecto informal fue creciendo gracias al entusiasmo de vecinos,
+                familias, instituciones y voluntarios que querían participar.
+            </p><br>
+            <p>Con el tiempo, estas acciones se transformaron en una misión sólida: crear espacios donde las generaciones
+                pudieran encontrarse, escucharse y acompañarse. Así nació oficialmente Conectando Generaciones, una ONG
+                dedicada a fortalecer los vínculos intergeneracionales y promover el bienestar emocional de los adultos
+                mayores a través de actividades creativas, solidarias y comunitarias.
+            </p><br>
+            <p>Hoy seguimos creciendo con el mismo espíritu: construir puentes, generar sonrisas y demostrar que cada
+                encuentro puede cambiar una vida. Porque creemos que cuando las generaciones se unen, no solo compartimos
+                tiempo: compartimos humanidad.
+            </p>
+        </section>
+        <section class="section" style="background:linear-gradient(90deg, #163c5c, #10324e)">
+            <div class="container">
+                <p class="slogan">"Unimos historias, creamos sonrisas"</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container flex">
+                <picture>
+                    <source srcset="imagenes/señoraleer-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/señoraleer-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/señoraleer-pag-1600.jpg" alt="Misión - ONG" />
+                </picture>
+                <div class="text-box">
+                    <h2>Nuestra Misión</h2>
+                    <p>
+                        Buscamos que cada encuentro sea una oportunidad para compartir historias, aprender unos de otros y
+                        fortalecer la autoestima y la calidad de vida de los adultos mayores, quienes muchas veces enfrentan
+                        situaciones de soledad o falta de integración.
+                    </p>
+                    <p>
+                        A través de programas de voluntariado, eventos comunitarios y proyectos recreativos, aspiramos a
+                        construir una comunidad donde cada persona, sin importar su edad, pueda sentirse valorada,
+                        acompañada y parte de algo más grande.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container flex">
+                <div class="text-box">
+                    <h2>Nuestra Visión</h2>
+                    <p>
+                        Nuestra visión es convertirnos en una organización referente en la promoción de vínculos
+                        significativos entre generaciones, destacándonos por nuestro compromiso con el bienestar emocional y
+                        la inclusión de los adultos mayores.
+                        Imaginamos una sociedad donde la edad no sea una barrera, sino un puente que une experiencias,
+                        aprendizajes y afectos. Queremos impulsar un movimiento social en el que las generaciones se apoyen
+                        y enriquezcan mutuamente, creando redes de apoyo y actividades comunitarias que trasciendan el
+                        tiempo y el espacio.
+                    </p>
+                </div>
+                <picture>
+                    <source srcset="imagenes/mision-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                    <source srcset="imagenes/mision-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                    <source srcset="imagenes/mision-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                    <img src="imagenes/mision-pag-1600.jpg" alt="Visión - ONG" />
+                
+                </picture>
+            </div>
+        </section>
+        <section class="section" id="valores">
+            <div class="container">
+                <h2>Nuestros Valores</h2>
+                <p>Aplicamos estos valores en cada programa, guiando cada encuentro y actividad que realizamos. A través de
+                    ellos acompañamos a los adultos mayores, fortalecemos la unión entre generaciones y garantizamos que
+                    cada proyecto se desarrolle con calidez, respeto y verdadera conexión humana.
+                </p>
+
+                <div class="burbujas-container">
+                    <div class="burbuja flip-card" data-texto="Valorar la dignidad de cada persona mayor">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h4>Empatia</h4>
+                            </div>
+                            <div class="flip-back">
+                                <p> 💬Sentir y Acompañar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burbuja flip-card" data-texto="Valorar la dignidad de cada persona mayor">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h4>Respeto</h4>
+                            </div>
+                            <div class="flip-back">
+                                <p> 🌿Valorar cada historia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burbuja flip-card" data-texto="Valorar la dignidad de cada persona mayor">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h4>Solidaridad</h4>
+                            </div>
+                            <div class="flip-back">
+                                <p> 🤝 Ayudar sin esperar algo a cambio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burbuja flip-card" data-texto="Valorar la dignidad de cada persona mayor">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h4>Alegria</h4>
+                            </div>
+                            <div class="flip-back">
+                                <p> 😊 Compartir momentos felices y crear sonrisas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burbuja flip-card" data-texto="Valorar la dignidad de cada persona mayor">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <h4>Inclusion</h4>
+                            </div>
+                            <div class="flip-back">
+                                <p> 🧩Unir generaciones</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+  
+        <footer>
+            <div class="columna">
+                <h3 class="nombre">© 2025 - Giovanna Manograsso y <br>Melina Bovarines</h3>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Mapa del sitio</h3>
+                <ul>
+                    <li><a class="boton" href="index.html">Inicio</a></li>
+                    <li><a class="boton" href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a class="boton" href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a class="boton" href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Redes sociales</h3>
+                <ul>
+                    <li><a class="boton" href="https://www.tiktok.com/">TikTok</a></li>
+                    <li><a class="boton" href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a class="boton" href="../linktree/index.html">Linktree</a></li>
+                </ul>
+            </div>
+            <div class="volver-arriba-footer">
+                <a href="sobrenosotros.html" class="volver-arriba">Volver arriba</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Seleccionamos el botón hamburguesa y el menú
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            // Alternamos la clase 'show' para mostrar/ocultar el menú
+            navLinks.classList.toggle('show');
+
+            // Alternamos la animación de la hamburguesa
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    <script src="paginas.js"></script>
+</body>
+</html>

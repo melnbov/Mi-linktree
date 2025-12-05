@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conectando Generaciones es una iniciativa que promueve la inclusión y el bienestar de los adultos mayores mediante actividades intergeneracionales. A través de voluntariado, talleres y eventos solidarios, buscamos reducir la soledad, fortalecer vínculos y construir comunidades más unidas. Además, contamos con un programa de sponsors que apoya nuestras acciones y reconoce el compromiso de los voluntarios.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Giovanna Manograsso y Melina Bovarines">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros </title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="imagenes-index/favicon-convertido-a-256x256.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-progr.css">
+</head>
+<body>
+    <div id="theme-container" class="light">
+        <nav>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li class="logo-centro">
+                        <a class="logo" href="index.html">
+                            <img src="imagenes-index/logo1.png" width="50px">
+                            Conectando generaciones
+                        </a>
+                    </li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">
+                        <img id="toggle-icon" src="imagenes/sol.png" alt="icono">
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <header class="header-program">
+            <picture class="bg-img">
+                <source srcset="imagenes/comunidad-pag-900.jpg" media="(max-width: 600px)" type="image/jpeg">
+                <source srcset="imagenes/comunidad-pag-1200.jpg" media="(max-width: 1024px)" type="image/jpeg">
+                <source srcset="imagenes/comunidad-pag-1600.jpg" media="(min-width: 1025px)" type="image/jpeg">
+                <img src="imagenes/comunidad-pag-1600.jpg" alt="Voluntarios">
+            </picture>
+            <div class="header-content">
+                <h1>Comunidad en accion</h1>
+            </div>
+        </header>
+        <section class="inf-voluntario">
+            <h2>Que hacemos en Comunidad en Accion</h2>
+            <p>Dentro de nuestra organización desarrollamos un programa de Talleres Creativos Intergeneracionales pensado
+                para mejorar el bienestar emocional, social y cotidiano de los adultos mayores. Estas actividades reúnen a
+                niños, jóvenes y adultos de distintas edades en un mismo espacio, promoviendo el intercambio de
+                experiencias, el aprendizaje mutuo y la construcción de vínculos significativos. Creemos firmemente que la
+                creatividad y el contacto humano son herramientas poderosas para acompañar a quienes han dedicado toda una
+                vida a construir comunidad.
+            </p><br>
+            <p>
+                <strong>En los talleres se realizan actividades artísticas, juegos, espacios de conversación, dinámicas grupales y
+                proyectos manuales que estimulan la imaginación, la memoria y la expresión personal. Más que simples
+                actividades recreativas, estos encuentros se convierten en momentos llenos de alegría, contención y
+                compañía.</strong>Para los adultos mayores, compartir tiempo con generaciones más jóvenes les brinda energía,
+                motivación y un sentido renovado de pertenencia. Para los más jóvenes, representa una oportunidad única de
+                aprender de la experiencia, la sabiduría y las historias que ellos tienen para contar.
+            </p><br>
+            <p>
+                Te invitamos a formar parte de esta iniciativa que conecta corazones y derriba barreras generacionales. Cada
+                encuentro es una oportunidad para crear recuerdos, fortalecer lazos y hacer que nuestros adultos mayores se
+                sientan valorados, escuchados y acompañados. Si querés dejar una huella positiva y compartir tu energía con
+                quienes más lo aprecian, este es el lugar ideal para vos. <strong>¡Sumate como voluntario y ayudanos a seguir
+                construyendo días más felices, creativos y humanos para nuestros adultos mayores!</strong>
+            </p>
+        </section>
+        <section>
+            <h2>Nuestras actividades</h2>
+            <div class="my-carousel-container">
+                <button class="my-arrow my-left" onclick="moveSlide(-1)">&#10094;</button>
+
+                <div class="my-carousel">
+                    <div class="my-carousel-track">
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/señoraleer-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/señoraleer-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/señoraleer-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/señoraleer-pag-1600.jpg" alt="Comunidad en accion">
+                                </picture>
+                                <p class="desc">
+                                    Creamos talleres donde los adultos mayores realizan actividades como la lectura de
+                                    cuentos para niños, fomentando el intercambio generacional y fortaleciendo los lazos
+                                    comunitarios.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/comunidadancia-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/comunidadancia-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/comunidadancia-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/comunidadancia-pag-1600.jpg" alt="Imagen 2">
+                                </picture>
+
+                                <p class="desc">
+                                    Promovemos talleres donde los adultos mayores practican deportes como tenis,
+                                    fomentando la actividad física, la diversión y el bienestar en comunidad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/niños-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/niños-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/niños-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/niños-pag-1600.jpg" alt="">
+                                </picture>
+                                <p class="desc">
+                                    Creamos actividades recreativas y juegos para abuelos, niños y jóvenes, generando
+                                    espacios compartidos donde las familias disfrutan, se conectan y fortalecen sus
+                                    vínculos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-carousel-item">
+                            <div class="my-carousel-card">
+                                <picture>
+                                    <source srcset="imagenes/abuelostejen-pag-900.jpg" media="(max-width: 600px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/abuelostejen-pag-1200.jpg" media="(max-width: 1024px)"
+                                        type="image/jpeg">
+                                    <source srcset="imagenes/abuelostejen-pag-1600.jpg" media="(min-width: 1025px)"
+                                        type="image/jpeg">
+                                    <img src="imagenes/abuelostejen-pag-1600.jpg" alt="Imagen 4">
+                                </picture>
+
+                                <p class="desc">
+                                    Ofrecemos clases de tejido abiertas a quienes quieran participar, creando un espacio
+                                    cálido donde los adultos mayores comparten sus conocimientos y disfrutan aprendiendo
+                                    junto a otros
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-arrow my-right" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        <div class="btn-container">
+            <button type="button" class="btn aplicar-voluntario" data-bs-toggle="modal" data-bs-target="#voluntarioModal">
+                Aplicar
+            </button>
+            <button class="btn-volver"><a href="programasong.html">Volver atras</a></button>
+        </div>
+        <!-- MODAL VOLUNTARIADO -->
+        <div class="modal fade" id="voluntarioModal" tabindex="-1" aria-labelledby="voluntarioModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="voluntarioModalLabel">Voluntariado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formVoluntariado">
+                            <label class="form-label">Nombre completo:</label>
+                            <input type="text" class="form-control" id="volNombre" required>
+                            <label class="form-label mt-3">Email:</label>
+                            <input type="email" class="form-control" id="volEmail" required>
+                            <label class="form-label mt-3">Teléfono:</label>
+                            <input type="tel" class="form-control" id="volTelefono" >
+                            <label class="form-label mt-3">Disponibilidad:</label>
+                            <select class="form-select" id="volDisponibilidad" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Fines de semana">Fines de semana</option>
+                                <option value="Días de semana por la tarde">Días de semana por la tarde</option>
+                                <option value="Días de semana por la mañana">Días de semana por la mañana</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                            <label class="form-label mt-3">¿Por qué querés ser voluntario/a?</label>
+                            <textarea class="form-control" id="volMotivo" rows="3" required></textarea>
+                            <img src="imagenes-index/voluntario.jpg" alt="">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="btnEnviarVoluntario" type="button" class="btn btn-success">Enviar</button>
+                    </div>
+                    <!-- FORMULARIO OCULTO para enviar por FormSubmit -->
+                    <form id="formVoluntarioMail" action="https://formsubmit.co/giovannamanograsso@gmail.com" method="POST" style="display:none;">
+                        <input type="hidden" name="nombre" id="mailVolNombre">
+                        <input type="hidden" name="email" id="mailVolEmail">
+                        <input type="hidden" name="telefono" id="mailVolTelefono">
+                        <input type="hidden" name="disponibilidad" id="mailVolDisponibilidad">
+                        <input type="hidden" name="motivo" id="mailVolMotivo">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL CONFIRMACIÓN -->
+        <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="confirmacionModalLabel">¡Formulario enviado!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        Gracias por tu aporte. <br>Serás redirigido a la página principal.
+                    </div>
+                    <div class="modal-footer">
+                        <a href="programasong.html" id="volverIndex" class="btn btn-primary">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="columna">
+                <h3 class="nombre">© 2025 - Giovanna Manograsso y <br>Melina Bovarines</h3>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Mapa del sitio</h3>
+                <ul>
+                    <li><a class="boton" href="index.html">Inicio</a></li>
+                    <li><a class="boton" href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a class="boton" href="programasong.html">Programas</a></li>
+                    <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
+                    <li><a class="boton" href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3 class="nombre">Redes sociales</h3>
+                <ul>
+                    <li><a class="boton" href="https://www.tiktok.com/">TikTok</a></li>
+                    <li><a class="boton" href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a class="boton" href="../linktree/index.html">Linktree</a></li>
+                </ul>
+            </div>
+            <div class="volver-arriba-footer">
+                <a href="comunidad.html" class="volver-arriba">Volver arriba</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Seleccionamos el botón hamburguesa y el menú
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            // Alternamos la clase 'show' para mostrar/ocultar el menú
+            navLinks.classList.toggle('show');
+
+            // Alternamos la animación de la hamburguesa
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    <script src="paginas.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
