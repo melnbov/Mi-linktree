@@ -1276,11 +1276,13 @@ footer {
   }
 
   .articulo-texto h2 {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .articulo-texto p {
     font-size: 15px;
+    text-align: center;
+    
   }
 
   .btn-leer-mas {
@@ -1335,37 +1337,26 @@ footer {
     border-radius: 50%;
   }
 
-  footer {
-    text-align: center;
-    gap: 10px;
-    padding: 35px 10px;
+    footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 25px;
+    padding: 30px 10px;
   }
 
   footer .columna {
     width: 100%;
-    margin-bottom: 15px;
-    padding: 0 10px;
+    max-width: 300px;
   }
 
-  footer h3 {
-    font-size: 18px;
-  }
-
-  footer ul li {
-    margin: 5px 0;
+  footer ul {
+    padding: 0;
+    list-style: none;
   }
 
   .volver-arriba-footer {
-    margin-top: 15px;
-  }
-
-  .volver-arriba {
-    font-size: 16px;
+    margin-top: 10px;
   }
 }
 

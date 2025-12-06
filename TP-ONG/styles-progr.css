@@ -673,12 +673,17 @@ footer {
 
 #theme-container.dark p,
 #theme-container.dark h1,
-#theme-container.dark h2,
 #theme-container.dark h3,
 #theme-container.dark h4,
 #theme-container.dark li,
 #theme-container.dark a {
     color: #fff !important;
+}
+
+#theme-container.dark h2
+{
+    color:#4b7da5 !important;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* NAV y FOOTER */
@@ -718,13 +723,13 @@ footer {
 
 /*   ARTÍCULO / TARJETAS  */
 
-#theme-container.dark .carousel-card {
+#theme-container.dark .my-carousel-card {
     background: #0f0f0f !important;
     border: 1px solid #333 !important;
 }
 
 
-#theme-container.dark .btn-aplicar:hover{
+#theme-container.dark .aplicar-voluntario{
     background: #265781;
     color: white;
     font-weight: bold;
@@ -732,33 +737,30 @@ footer {
 }
 
 #theme-container.dark .btn-volver{
-    background: #000;
+    background: #254060;
     color: white;
     border: 1px solid #333 !important;
 }
 
-#theme-container.dark .arrow {
-    background: #000000cc; 
-    border: 1px solid #333 !important;
-    font-size: 24px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#theme-container.dark .my-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(132, 131, 131);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
     cursor: pointer;
-    color: #333;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-    transition: 0.3s ease;
-    position: relative;
     z-index: 10;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-#theme-container.dark .arrow:hover {
-    background: #005fb8; 
+#theme-container.dark .my-arrow:hover {
+    background: #265781; 
     color: white;
-    transform: scale(1.1); 
+     
 }
 
 /* ESTILOS BASE DEL MODAL DE CONFIRMACIÓN (para #confirmacionModal) */
@@ -1024,22 +1026,21 @@ footer {
     }
 
     .header-content h1 {
-        font-size: 1.6rem;
-    }
-    .header-voluntario h1 {
-        font-size: 28px;
-        text-align: center;
-        padding: 40px 10px;
+        font-size: 32px;
     }
 
     /* SECCIONES DE TEXTO */
     .inf-voluntario {
-        padding: 15px;
+        padding: 20px 26px;
         text-align: justify;
     }
 
+    .inf-voluntario p{
+        font-size: 15px;
+    }
+
     .inf-voluntario h2 {
-        font-size: 22px;
+        font-size: 28px;
         text-align: center;
     }
 
@@ -1061,7 +1062,7 @@ footer {
     }
 
     .desc {
-        font-size: .95rem;
+        font-size: 13px;
         padding: 0 10px;
     }
 
@@ -1072,7 +1073,7 @@ footer {
     /* Título centrado */
     section h2 {
         text-align: center;
-        font-size: 22px;
+        font-size: 28px;
         margin-bottom: 15px;
     }
 
@@ -1102,39 +1103,27 @@ footer {
         margin-top: 10px;
     }
 
-    /* FOOTER */
-    footer {
-        text-align: center;
-        gap: 10px;
-        padding: 35px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+     footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 10px;
+  }
 
-    footer .columna {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 0 10px;
-    }
+  footer .columna {
+    width: 100%;
+    max-width: 300px;
+  }
 
-    footer h3 {
-        font-size: 18px;
-    }
+  footer ul {
+    padding: 0;
+    list-style: none;
+  }
 
-    footer ul li {
-        margin: 5px 0;
-    }
-
-    .volver-arriba-footer {
-        margin-top: 15px;
-    }
-
-    .volver-arriba {
-        font-size: 16px;
-    }
+  .volver-arriba-footer {
+    margin-top: 10px;
+  }
 }
 
 html, body {
@@ -1212,8 +1201,4 @@ html, body {
     }
 }
 
-@media (max-width: 430px) {
-    .desc {
-        font-size: .9rem;
-    }
-}
+
