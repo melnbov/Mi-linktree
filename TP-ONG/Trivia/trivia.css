@@ -923,38 +923,27 @@ form {
         font-size: 18px;
     }
 
-    footer {
-        text-align: center;
-        gap: 10px;
-        padding: 35px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+     footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 10px;
+  }
 
-    footer .columna {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 0 10px;
-    }
+  footer .columna {
+    width: 100%;
+    max-width: 300px;
+  }
 
-    footer h3 {
-        font-size: 18px;
-    }
+  footer ul {
+    padding: 0;
+    list-style: none;
+  }
 
-    footer ul li {
-        margin: 5px 0;
-    }
-
-    .volver-arriba-footer {
-        margin-top: 15px;
-    }
-
-    .volver-arriba {
-        font-size: 16px;
-    }
+  .volver-arriba-footer {
+    margin-top: 10px;
+  }
 }
 
 html, body {
@@ -988,7 +977,7 @@ html, body {
 }
 
 
-@media (max-width: 1024px) {
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
 
   /* NAV */
   .nav-container {
