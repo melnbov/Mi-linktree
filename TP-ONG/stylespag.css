@@ -778,7 +778,7 @@ footer {
 
 #theme-container.dark h2
 {
-    color:#4b7da5 !important;
+    color:#7abbf1 !important;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -1218,16 +1218,18 @@ header h1 {
 
     /* FILTROS */
     .filtros {
+        display: flex;
         flex-wrap:wrap;
+        justify-content: center;
         gap: 10px;
         padding: 15px;
+    
     }
-
     .filtros button {
-        width: 45%;
-        font-size: 14px;
-        padding: 8px;
-    }
+    flex: 0 0 44%; 
+    font-size: 13px;
+    padding: 7px 6px;
+}
 
     /* CARDS DE PROGRAMAS */
     .lista-proyectos {
@@ -1278,15 +1280,16 @@ header h1 {
         font-size: 28px;
     }
     .grid-galeria {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-        padding: 5px;
-    }
+    display: grid;
+    grid-template-columns: 1fr; /* una imagen por fila */
+    gap: 12px;
+}
 
-    .grid-galeria img {
-        width: 100%;
-        height: auto;
-    }
+.grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
      footer {
     display: flex;
@@ -1310,6 +1313,7 @@ header h1 {
     margin-top: 10px;
   }
 }
+
 
 /* RESPONSIVE GENERAL */
 @media (max-width: 768px) {
@@ -1420,12 +1424,18 @@ html, body {
   overflow-x: hidden;
 }
 
-
+@media (max-width: 360px) {
+    .filtros button {
+        flex: 0 0 42%;
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+}
 
 /*Responsive para tablet */
 
 /* TABLET VERTICAL (portrait) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 600px) and (max-width: 1024px) {
 
    
 
@@ -1453,6 +1463,33 @@ html, body {
     }
 
     /* SECCIONES DE TEXTO */
+    .container.flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px; /* más aire entre imagen y texto */
+        padding: 0 40px; /* márgenes laterales */
+    }
+
+    .container.flex img {
+        width: 85%; /* no ocupa todo el ancho */
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+
+    .text-box {
+        padding: 10px 20px;
+        order: 2;
+    }
+
+    .text-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-box p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
     
 
     /* IMÁGENES */
@@ -1520,56 +1557,5 @@ html, body {
         width: 200px;
         margin-top: 10px;
         font-size: 11px;
-    }
-}
-
-/* TABLET HORIZONTAL (landscape) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-    /* NAV */
-    .nav-container {
-        padding: 0 30px;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .nav-links li a {
-        font-size: 17px;
-    }
-
-    /* HEADER */
-    .header-sobrenosotros {
-        height: 60vh;
-    }
-
-    .titulo {
-        font-size: 55px;
-    }
-
-    /* SECCIONES */
-    .flex {
-        gap: 25px;
-    }
-
-    .flex img {
-        width: 450px;
-    }
-
-    .text-box {
-        font-size: 1.05rem;
-    }
-
-    /* BURBUJAS */
-    .burbuja {
-        width: 170px;
-        height: 170px;
-    }
-
-    /* FOOTER */
-    footer {
-        padding: 40px 20px;
-        justify-content: space-evenly;
     }
 }

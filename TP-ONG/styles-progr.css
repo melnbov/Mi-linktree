@@ -227,8 +227,8 @@ h3 {
 .my-arrow:hover{
     background: #315C80;
     color: white;
-   
 }
+
 
 .desc{
    margin: 20px auto;
@@ -682,7 +682,7 @@ footer {
 
 #theme-container.dark h2
 {
-    color:#4b7da5 !important;
+    color:#7abbf1  !important;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -1103,27 +1103,27 @@ footer {
         margin-top: 10px;
     }
 
-     footer {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 25px;
-    padding: 30px 10px;
-  }
+    footer {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 30px 10px;
+    }
 
-  footer .columna {
-    width: 100%;
-    max-width: 300px;
-  }
+    footer .columna {
+        width: 100%;
+        max-width: 300px;
+    }
 
-  footer ul {
-    padding: 0;
-    list-style: none;
-  }
+    footer ul {
+        padding: 0;
+        list-style: none;
+    }
 
-  .volver-arriba-footer {
-    margin-top: 10px;
-  }
+    .volver-arriba-footer {
+        margin-top: 10px;
+    }
 }
 
 html, body {
@@ -1131,7 +1131,7 @@ html, body {
 }
 
 /*Responsive para Tablets*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+@media (min-width: 600px) and (max-width: 1024px) {
     /* NAV */
     .nav-container {
         padding: 0 20px;
@@ -1153,25 +1153,41 @@ html, body {
         font-size: 2rem;
     }
 
-     .my-carousel-item {
-        flex: 0 0 100%;
+    .my-carousel-item {
+        flex: 0 0 50%;
         padding: 12px;
+    }
+    .my-carousel-container {
+        position: relative;
+        overflow: visible !important; /* LIBERA LAS FLECHAS */
     }
 
     .my-carousel-card {
         border-radius: 12px;
         padding: 12px;
     }
-
-    .desc {
-        padding: 0 12px;
-        font-size: 1rem;
+    /* FLECHAS DEL CARRUSEL - SIEMPRE VISIBLES */
+    .my-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9999 !important;
+        background: #53515163;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-     
-    .my-right { right: 5px; }
-    .my-left  { left: 5px; }
-
+    /* Posición de flechas */
+    .my-left { left: -5px; }
+    .my-right { right: -5px; }
 
     /* BOTONES */
     .btn-container {

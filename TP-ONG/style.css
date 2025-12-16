@@ -590,7 +590,7 @@ nav ul li:first-child {
   content: "";
   width: 60px;
   height: 4px;
-  background: #315C80;
+  background: #7abbf1 ;
   display: block;
   margin-top: 8px;
   border-radius: 2px;
@@ -636,7 +636,7 @@ section h2::after {
   content: "";
   width: 80px;
   height: 4px;
-  background: #315C80;
+  background: #7abbf1 ;
   display: block;
   margin: 10px auto 0;
   border-radius: 2px;
@@ -694,6 +694,28 @@ section h2::after {
   background: #1C3347;
   transform: scale(1.05);
 }
+/* BOTÓN ENVIAR DEL FORMULARIO DONAR (estilo mejorado) */
+.btn-enviar-donar {
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #315C80;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+
+  /* Mejoras */
+  margin: 0 auto;            /* lo centra */
+  display: block;             /* hace que margin auto funcione */
+}
+.btn-enviar-donar:hover {
+  background: #1C3347;
+  transform: scale(1.05);
+}
+
 
 #btnEnviar {
   background: #368b68;
