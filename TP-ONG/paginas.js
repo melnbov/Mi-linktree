@@ -28,32 +28,40 @@ filtros.forEach(btn => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".my-carousel-track");
-    const items = Array.from(document.querySelectorAll(".my-carousel-item"));
-    const itemWidth = items[0].offsetWidth;
-    const totalItems = items.length;
+  const track = document.querySelector(".my-carousel-track");
+  const items = Array.from(document.querySelectorAll(".my-carousel-item"));
+  let itemWidth = items[0].offsetWidth;
+  const totalItems = items.length;
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function moveSlide(direction) {
-        currentIndex += direction;
+  function updateWidth() {
+    itemWidth = items[0].offsetWidth; // se actualiza cuando cambia el tamaño
+    moveSlide(0); // reajusta posición
+  }
 
-        // BUCLE INFINITO
-        if (currentIndex < 0) {
-            currentIndex = totalItems - 2; // Último par visible
-        } else if (currentIndex > totalItems - 2) {
-            currentIndex = 0; // Volver al inicio
-        }
+  window.addEventListener("resize", updateWidth);
 
-        const translateX = -(currentIndex * itemWidth);
-        track.style.transform = `translateX(${translateX}px)`;
+  function moveSlide(direction) {
+    const itemsVisible =
+    window.innerWidth <= 768 ? 1 : // celular
+    window.innerWidth <= 1024 ? 2 : 2; // tablet y PC: 2 visibles
+
+    currentIndex += direction;
+
+    // Bucle infinito correcto
+    if (currentIndex < 0) {
+      currentIndex = totalItems - itemsVisible;
+    } else if (currentIndex > totalItems - itemsVisible) {
+      currentIndex = 0;
     }
 
-    window.moveSlide = moveSlide;
-
-    moveSlide(0);
+    const translateX = -(currentIndex * itemWidth);
+    track.style.transform = `translateX(${translateX}px)`;
+  }
+  window.moveSlide = moveSlide;
+  updateWidth();
 });
-
 
 // --------------------- ENVÍO FORMULARIO VOLUNTARIADO ---------------------
 document.getElementById("btnEnviarVoluntario").addEventListener("click", function(event) {
@@ -91,8 +99,6 @@ document.getElementById("btnEnviarVoluntario").addEventListener("click", functio
 document.getElementById("volverIndex").addEventListener("click", function() {
   window.location.href = "index.html";
 });
-
-
 
 //boton de modos
 function toggleTheme() {

@@ -176,12 +176,11 @@
             </button>
             <button class="btn-volver"><a href="programasong.html">Volver atras</a></button>
         </div>
-        <!-- MODAL VOLUNTARIADO -->
         <div class="modal fade" id="voluntarioModal" tabindex="-1" aria-labelledby="voluntarioModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title fs-5" id="voluntarioModalLabel">Voluntariado</h5>
+                        <h1 class="modal-title fs-5" id="voluntarioModalLabel">Voluntario</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
@@ -207,34 +206,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button id="btnEnviarVoluntario" type="button" class="btn btn-success">Enviar</button>
-                    </div>
-                    <!-- FORMULARIO OCULTO para enviar por FormSubmit -->
-                    <form id="formVoluntarioMail" action="https://formsubmit.co/giovannamanograsso@gmail.com" method="POST" style="display:none;">
-                        <input type="hidden" name="nombre" id="mailVolNombre">
-                        <input type="hidden" name="email" id="mailVolEmail">
-                        <input type="hidden" name="telefono" id="mailVolTelefono">
-                        <input type="hidden" name="disponibilidad" id="mailVolDisponibilidad">
-                        <input type="hidden" name="motivo" id="mailVolMotivo">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- MODAL CONFIRMACIÓN -->
-        <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title fs-5" id="confirmacionModalLabel">¡Formulario enviado!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        Gracias por tu aporte. <br>Serás redirigido a la página principal.
-                    </div>
-                    <div class="modal-footer">
-                        <a href="programasong.html" id="volverIndex" class="btn btn-primary">Volver</a>
+                        <!-- Este botón envía el formulario -->
+                        <form id="formVoluntarioEmailJS">
+                            <button type="button" id="btnEnviarVoluntario" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -277,6 +252,51 @@
 
             // Alternamos la animación de la hamburguesa
             hamburger.classList.toggle('active');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        emailjs.init("jgWV5R2W37vTifhI_");
+        // ---------- VOLUNTARIADO ----------
+        document.getElementById("btnEnviarVoluntario").addEventListener("click", function () {
+
+            const nombre = document.getElementById("volNombre").value;
+            const email = document.getElementById("volEmail").value;
+            const telefono = document.getElementById("volTelefono").value;
+            const disponibilidad = document.getElementById("volDisponibilidad").value;
+            const motivo = document.getElementById("volMotivo").value;
+
+            if (!nombre || !email || !disponibilidad || !motivo) {
+                Swal.fire("Campos incompletos", "Por favor completá todo.", "warning");
+                return;
+            }
+
+            emailjs.send("service_ru3yzzu", "template_6yxg7yh", {
+                nombre, email, telefono, disponibilidad, motivo
+            })
+            .then(() => {
+
+                // CERRAR MODAL
+                const modal = bootstrap.Modal.getInstance(document.getElementById("voluntarioModal"));
+                modal.hide();
+
+                // LIMPIAR CAMPOS
+                document.getElementById("formVoluntariado").reset();
+
+                // ALERTA
+                Swal.fire({
+                    title: "¡Formulario enviado!",
+                    text: "Tu postulación de voluntariado fue registrada 💙",
+                    icon: "success",
+                    confirmButtonText: "Cerrar"
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+                Swal.fire("Error", "No se pudo enviar el formulario ❌", "error");
+            });
+
         });
     </script>
     <script src="paginas.js"></script>

@@ -590,7 +590,7 @@ nav ul li:first-child {
   content: "";
   width: 60px;
   height: 4px;
-  background: #7abbf1 ;
+  background: #315C80;
   display: block;
   margin-top: 8px;
   border-radius: 2px;
@@ -636,7 +636,7 @@ section h2::after {
   content: "";
   width: 80px;
   height: 4px;
-  background: #7abbf1 ;
+  background: #315C80;
   display: block;
   margin: 10px auto 0;
   border-radius: 2px;
