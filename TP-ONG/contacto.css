@@ -533,6 +533,145 @@ footer {
   display: none; /* Oculto en desktop */
 }
 
+/* MODAL CONFIRMACIÓN PERSONALIZADO */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(3px);
+}
+
+#confirmacionModal .modal-dialog {
+  max-width: 420px;
+  margin: 1.75rem auto;
+  transform-origin: center top;
+}
+
+#confirmacionModal .modal-content {
+  border-radius: 14px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 18px 40px rgba(12, 30, 60, 0.45);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(243,248,255,0.98));
+  padding: 0;
+  animation: modalPop 260ms cubic-bezier(.2,.9,.3,1);
+}
+
+#confirmacionModal .modal-header {
+  background: linear-gradient(90deg, #315C80, #4A7AA5);
+  color: #fff;
+  border-bottom: none;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#confirmacionModal .modal-header .modal-title::before {
+  content: "✓";
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 700;
+  margin-right: 8px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+  font-size: 18px;
+}
+
+#confirmacionModal .modal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+#confirmacionModal .modal-body {
+  padding: 20px 22px;
+  color: #12233a;
+  font-size: 0.98rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,252,255,0.98));
+}
+
+#confirmacionModal .modal-footer {
+  display:flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px 20px;
+  border-top: none;
+  background: transparent;
+}
+
+#confirmacionModal .modal-footer .btn {
+  min-width: 120px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#confirmacionModal .modal-footer .btn.btn-primary {
+  background: linear-gradient(135deg, #315C80, #4A7AA5) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 8px 22px rgba(49,92,128,0.28);
+}
+#confirmacionModal .modal-footer .btn.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(49,92,128,0.34);
+}
+
+#confirmacionModal .modal-footer .btn.btn-secondary {
+  background: transparent !important;
+  color: #315C80 !important;
+  border: 1px solid #d7e6f6 !important;
+}
+
+@keyframes modalPop {
+  from { transform: translateY(-8px) scale(.98); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+/* Estilo base del botón de enviar */
+.btn-enviar {
+    background: linear-gradient(135deg, #3A4F7A, #2C3E63);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para todos los efectos */
+    display: inline-block;
+    width: 100%; /* Ocupa el ancho del formulario en móviles */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+    margin-top: 10px;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.btn-enviar:hover {
+    background-color: #4e6a88;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Efecto al hacer clic (Active) */
+.btn-enviar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Estado deshabilitado (cuando se está enviando) */
+.btn-enviar:disabled {
+    background-color: #a0c4ff;
+    cursor: not-allowed;
+    transform: none;
+}
+
 /* MENÚ HAMBURGUESA (MOBILE) */
 @media (max-width: 768px) {
   nav .nav-container {

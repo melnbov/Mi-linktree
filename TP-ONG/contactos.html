@@ -6,7 +6,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Giovanna Manograsso y Melina Bovarines">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel Test</title>
+    <title>Contacto</title>
     <link rel="icon" href="imagenes-index/favicon-convertido-a-256x256.jpeg" type="image/x-icon">
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
                     <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
                     <li><a href="programasong.html">Programas</a></li>
                     <li><a class="boton" href="Trivia/trivia.html">Trivia</a></li>
-                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
                     <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">
                         <img id="toggle-icon" src="imagenes-index/sol.png" alt="icono">
                     </button>
@@ -46,13 +46,11 @@
         </nav>
         <main class="contact-section">
             <div class="contact-grid">
-                <!-- FORM -->
                 <section class="contact-card" aria-labelledby="contact-title">
                     <h2 id="contact-title">Contacto — Comunicación</h2>
                     <p class="lead">¿Querés contactarnos? Completá el formulario y te respondemos a la brevedad.</p>
 
-                    <!-- FormSubmit: cambiá el correo por el tuyo en action -->
-                    <form id="contactForm" action="https://formsubmit.co/giovannamanograsso@gmail.com" method="POST">
+                    <form id="contactForm">
                         <div class="form-row">
                             <div class="form-field">
                                 <label class="small" for="nombre">Nombre</label>
@@ -60,47 +58,40 @@
                             </div>
                             <div class="form-field">
                                 <label class="small" for="apellido">Apellido</label>
-                                <input id="apellido" name="apellido" type="text" placeholder="Tu apellido">
+                                <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-field">
                                 <label class="small" for="email">E-mail</label>
-                                <input id="email" name="email" type="email" placeholder="tu@ejemplo.com" required>
-                            </div>
-                            <div class="form-field">
-                                <label class="small" for="telefono">Teléfono</label>
-                                <input id="telefono" name="telefono" type="tel" placeholder="(opcional)">
+                                <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" required>
                             </div>
                         </div>
 
-                        <div style="margin-bottom:12px;">
+                        <div class="form-field">
                             <label class="small" for="asunto">Asunto</label>
-                            <input id="asunto" name="asunto" type="text" placeholder="Asunto del mensaje" required>
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected>Seleccioná un motivo...</option>
+                                <option value="Consulta General">Consulta General</option>
+                                <option value="Voluntariado">Quiero ser Voluntario</option>
+                                <option value="Sponsors">Programa de Sponsors</option>
+                                <option value="Talleres">Talleres y Actividades</option>
+                                <option value="Otro">Otro motivo</option>
+                            </select>
                         </div>
-
-                        <div style="margin-bottom:12px;">
+                        <div class="form-field">
                             <label class="small" for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu consulta aquí..." required></textarea>
                         </div>
 
-                        <!-- Campos ocultos de FormSubmit -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_subject" value="Nuevo mensaje desde la web - Contacto">
-
-                        <div style="display:flex; gap:10px; align-items:center; margin-top:10px;">
-                            <button type="submit" class="btn-primary">Enviar mensaje</button>
-                        </div>
+                        <button type="submit" class="btn-enviar" id="btnEnviarContacto">Enviar Mensaje</button>
                     </form>
                 </section>
-                <!-- INFO + MAP + REDES -->
+            
                 <aside class="info-card" aria-labelledby="info-title">
                     <h3 id="info-title">Información de contacto</h3>
-
                     <div class="info-item">
-                        <!-- Imagen ubicación -->
                         <img src="imagenes-index/ubicación.jpg" alt="Ubicación" class="info-icon">
                         <div>
                             <div style="font-weight:600; color:var(--primary-dark)">Dirección</div>
@@ -109,7 +100,6 @@
                     </div>
 
                     <div class="info-item">
-                        <!-- Imagen teléfono -->
                         <img src="imagenes-index/telefono.jpg" alt="Teléfono" class="info-icon">
                         <div>
                             <div style="font-weight:600; color:var(--primary-dark)">Teléfono</div>
@@ -118,7 +108,6 @@
                     </div>
 
                     <div class="info-item">
-                        <!-- Imagen mail -->
                         <img src="imagenes-index/mail.jpg" alt="E-mail" class="info-icon">
                         <div>
                             <div style="font-weight:600; color:var(--primary-dark)">E-mail</div>
@@ -127,7 +116,6 @@
                     </div>
 
                     <div class="info-item">
-                        <!-- Imagen horario -->
                         <img src="imagenes-index/horario.jpg" alt="Horario" class="info-icon">
                         <div>
                             <div style="font-weight:600; color:var(--primary-dark)">Horario</div>
@@ -135,37 +123,28 @@
                         </div>
                     </div>
 
-                    <!-- MAPA -->
                     <div class="map-wrap" aria-hidden="false" title="Mapa">
-                        <iframe
-                        src="https://www.google.com/maps?q=Lima%20757%2C%20C1073%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires&output=embed"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.847527011933!2d-58.381395!3d-34.6037389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc330b666d%3A0x6a0a09e07248e58a!2sLima%20757%2C%20C1073%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715000000000!5m2!1ses-419!2sar" 
+                        allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                
 
-                    <!-- REDES SOCIALES -->
                     <div style="margin-top:14px;">
                         <div style="font-weight:600; color:var(--primary-dark); margin-bottom:8px;">
                             Redes sociales
                         </div>
-
                         <div class="socials" role="list">
                             <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
                                 <img src="imagenes-index/instagram.jpg" alt="Instagram" width="22" height="22">
                             </a>
-
                             <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
                                 <img src="imagenes-index/facebook.jpg" alt="Facebook" width="22" height="22">
                             </a>
-
-                            <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                <img src="imagenes-index/tiktok.jpg" alt="LinkedIn" width="22" height="22">
+                            <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+                                <img src="imagenes-index/tiktok.jpg" alt="TikTok" width="22" height="22">
                             </a>
-
                             <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
                                 <img src="imagenes-index/youtube.jpg" alt="YouTube" width="22" height="22">
                             </a>
-
                         </div>
                     </div>
                 </aside>
@@ -214,5 +193,106 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="program.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function() {
+            // Inicializa con tu Public Key (la misma que usaste en el index)
+            emailjs.init("87BTKwYokHmISaMhc");
+        })();
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Cambiar el texto del botón mientras envía
+            const btn = document.getElementById("btnEnviarContacto");
+            const textoOriginal = btn.innerText;
+            btn.innerText = "Enviando...";
+            btn.disabled = true;
+
+            // Captura de valores
+            const serviceID = "service_xjbdset"; // Tu Service ID
+            const templateID = "template_ggkfqxp"; // IMPORTANTE: Crea una plantilla nueva en EmailJS para contacto
+        
+            // Objeto con los datos (asegúrate que los nombres coincidan con los {{}} de tu plantilla en EmailJS)
+            const params = {
+                nombre: document.getElementById("nombre").value,
+                apellido: document.getElementById("apellido").value,
+                email: document.getElementById("email").value,
+                asunto: document.getElementById("asunto").value,
+                mensaje: document.getElementById("mensaje").value
+            };
+
+            emailjs.send(serviceID, templateID, params)
+            .then(() => {
+                btn.innerText = textoOriginal;
+                btn.disabled = false;
+
+                // Alerta de éxito
+                Swal.fire({
+                    title: "¡Mensaje enviado!",
+                    text: "Gracias por contactarnos, te responderemos pronto. ✉️",
+                    icon: "success",
+                    confirmButtonText: "Genial"
+                });
+
+                // Limpiar formulario
+                document.getElementById("contactForm").reset();
+            })
+            .catch((err) => {
+                btn.innerText = textoOriginal;
+                btn.disabled = false;
+                console.error(err);
+                Swal.fire("Error", "No pudimos enviar tu mensaje. Intentalo más tarde. ❌", "error");
+            });
+        });
+    </script>
+    <script>
+        // ---------- CONTACTO (Página contacts.html) ----------
+        const contactForm = document.getElementById("contactForm");
+
+        // Verificamos que el formulario exista en la página actual para evitar errores
+        if (contactForm) {
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Capturamos los valores de los inputs por su ID
+                const nombre = document.getElementById("nombre").value;
+                const apellido = document.getElementById("apellido").value;
+                const email = document.getElementById("email").value;
+                const telefono = document.getElementById("telefono").value;
+                const asunto = document.getElementById("asunto").value;
+                const mensaje = document.getElementById("mensaje").value;
+
+                // Llamada a EmailJS
+                // IMPORTANTE: Asegúrate de crear el template en EmailJS y poner el ID aquí
+                emailjs.send("service_ru3yzzu", "TU_TEMPLATE_ID_CONTACTO", {
+                    nombre: nombre,
+                    apellido: apellido,
+                    email: email,
+                    telefono: telefono,
+                    asunto: asunto,
+                    mensaje: mensaje
+                })
+                .then(() => {
+                    // LIMPIAR CAMPOS
+                    contactForm.reset();
+
+                    // ALERTA DE ÉXITO (Usando SweetAlert como los anteriores)
+                    Swal.fire({
+                        title: "¡Mensaje enviado!",
+                        text: "Gracias por contactarnos, te responderemos a la brevedad 📩",
+                        icon: "success",
+                        confirmButtonText: "Cerrar"
+                    });
+                })
+                .catch((error) => {
+                    console.error("Error de EmailJS:", error);
+                    Swal.fire("Error", "No pudimos enviar tu mensaje en este momento ❌", "error");
+                });
+            });
+        }
+    </script>
 </body>
 </html>
